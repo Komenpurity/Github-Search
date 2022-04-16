@@ -12,10 +12,11 @@ export class UsersService {
 
   constructor(private httpClient:HttpClient) { }
 
-  getUsers(): Observable<any[]> {
+  getUsers(username: string): Observable<any[]> {
     //let param = new HttpParams();
     //param = param.append('username', 'SamTomashi');
-    return this.httpClient.get<any[]>(`${this.baseUrl}/users/samtomashi/repos`, {
+    const endpoint = 'users'
+    return this.httpClient.get<any[]>(`${this.baseUrl}/${endpoint}/${username}/repos`, { 
       //params: param,
       // headers : this.headers,
       //withCredentials: true

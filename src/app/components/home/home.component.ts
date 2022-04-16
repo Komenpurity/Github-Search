@@ -8,12 +8,13 @@ import { UsersService } from 'src/app/users.service';
 })
 export class HomeComponent implements OnInit {
   title: string = "Github Search API"
+  username: string = "Komenpurity"
 
   constructor(private usersService:UsersService) { }
 
 
   getPublicRepositories(){
-    this.usersService.getUsers().subscribe((response)=>{
+    this.usersService.getUsers(this.username).subscribe((response)=>{
       console.log(response) 
     })
   }
