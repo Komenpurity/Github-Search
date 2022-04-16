@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from 'src/app/users.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  title: string = "Github Search API"
 
-  constructor() { }
+  constructor(private usersService:UsersService) { }
+
+
+  getPublicRepositories(){
+    this.usersService.getUsers().subscribe((response)=>{
+      console.log(response) 
+    })
+  }
 
   ngOnInit(): void {
+    this.getPublicRepositories()
   }
 
 }
