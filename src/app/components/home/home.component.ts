@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { FormControl,FormGroup } from '@angular/forms';
 import { UsersService } from 'src/app/users.service';
 
 @Component({
@@ -9,10 +10,15 @@ import { UsersService } from 'src/app/users.service';
 })
 export class HomeComponent implements OnInit,OnDestroy {
   title: string = "Github Search API"
-  username: string = "Komenpurity"
+  //username: string = "Komenpurity"
   repositories!: any[];
   mySubscription = new Subscription()
 
+  searchForm = new FormGroup({
+    username: new FormControl('')
+    
+  })
+  
   constructor(private usersService:UsersService) { }
   ngOnDestroy(): void {
     this.mySubscription.unsubscribe() 
@@ -21,7 +27,7 @@ export class HomeComponent implements OnInit,OnDestroy {
 
   getPublicRepositories(){
     this.mySubscription.add(
-      this.usersService.getUsers(this.username).subscribe((response)=>{
+      this.usersService.getUsers(this.searchForm.getRawValue().username).subscribe((response)=>{
         this.repositories = response
       })
     )

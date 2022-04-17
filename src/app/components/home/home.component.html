@@ -2,12 +2,19 @@
     <h3 class="text-center display-3"> {{title}} </h3>
         <div class="row">
 
-        
+        <form [formGroup]="searchForm" (submit)="getPublicRepositories()">
+            <div class="form-group">
+                <input type="text" formControlName="username" class="form-control"  aria-describedby="usernameHelp" placeholder="Enter username">
+            </div>
+            <button type="submit" class="btn btn-primary" >Get Repositories</button>
+        </form>
 
 
-            <div class="col">
+            <div class="col m-3 p-3">
                 <ul *ngFor="let repo of repositories">
-                    <li> {{repo.name}} </li>
+                    
+                    <li class="display-6"> {{repo.name}} </li>
+                    <p> {{repo.description}} <p> 
                 </ul>
             </div>
 
