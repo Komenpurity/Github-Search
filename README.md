@@ -2,28 +2,49 @@
 created by Purity Jepkorir
 
 ## Project
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
+
+## Description of the project
+
+This is an Angular application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
+
+## Live Demo
+
+
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Pre-requisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+You need to have git installed. If not, you can install git with the following command in your terminal; '$ sudo apt-get install git-all`.
 
-## Build
+## Setup/Installation Requirements
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* Open your terminal.
+* Use this command to clone `$ git clone git@github.com:Komenpurity/Github-Search.git'.
+* This will clone the repositoty into your local folder.
+* Install Angular, npm, nvm and all dependencies.
+* Run ng serve -o to build and run on browser via http://localhost:4200.
+* Enjoy.
 
-## Running unit tests
+# How it works
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+A person can fill in the form and then posts the quote.People can vote on whether its
+inspirational or not.One should be able to delete it as well.
 
-## Running end-to-end tests
+## Technologies Used
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+* HTML
+* CSS
+* Bootstrap
+* Javascript
+* Typescript
+* Angular
+* GIT
 
-## Further help
+## License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This project is under the [MIT](https://opensource.org/licenses/MIT) license.
