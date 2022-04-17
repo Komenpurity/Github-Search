@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 })
 export class UsersService {
   private baseUrl = environment.BASE_URL
+  private token = environment.gitAccessToken
 
   constructor(private httpClient:HttpClient) { }
 
